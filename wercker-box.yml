@@ -1,0 +1,17 @@
+name: appengine-python
+version: 0.0.1
+inherits: wercker/python
+type: main
+platform: ubuntu@12.04
+description: wercker box for Google App Engine for Python
+keywords:
+  - app engine
+  - python 2.7
+packages:
+  - python-dev
+  - zip
+script: |
+  sudo apt-get update -qq
+  curl -s -o google_appengine.zip https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.10.zip
+  unzip -q google_appengine.zip
+  rm google_appengine.zip
