@@ -16,5 +16,6 @@ script: |
   sudo unzip -q google_appengine.zip -d /usr/local
   rm google_appengine.zip
   sudo patch -d /usr/local/google_appengine/lib/endpoints-1.0/endpoints -p0 -i $PWD/endpoints.patch
+  sudo pip install --quiet -r requirements.txt
 env:
   GOOGLE_APPENGINE: /usr/local/google_appengine
