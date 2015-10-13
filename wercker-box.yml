@@ -1,5 +1,5 @@
 name: appengine-python
-version: 1.9.27
+version: 1.9.27-1
 inherits: wercker/python@1.1.0
 type: main
 platform: ubuntu@12.04
